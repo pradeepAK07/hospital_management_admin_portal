@@ -15,26 +15,25 @@ import Dashboard from "../Dashboard/Dashboard";
 
 const Base = () => {
   return (
-    <div className="Base">
-      <Navbar />
-      <SideNavbar />
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Dashboard />} />
-          <Route path="/doctors" element={<Doctors />} />
-          <Route path="/chat" element={<Chat />} />
-          <Route path="/departments" element={<Departments />} />
-          <Route path="/patients" element={<Patients />} />
-          <Route
-            path="/doctor-appointments"
-            element={<DoctorsAppointments />}
-          />
-          <Route path="/staffs" element={<Staffs />} />
-          <Route path="DoctorsSchedule" element={<DoctorsSchedule />} />
-          <Route path="/email" element={<Email />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <div className="Base">
+        <Navbar />
+        <div className="Content">
+          <SideNavbar />
+          <Routes>
+            <Route exact path="/" element={<Dashboard />} />
+            <Route path="/doctors" element={<Doctors />} />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/departments" element={<Departments />} />
+            <Route path="/patients" element={<Patients />} />
+            <Route path="/appointments" element={<DoctorsAppointments />} />
+            <Route path="/staffs" element={<Staffs />} />
+            <Route path="/doctor-schedule" element={<DoctorsSchedule />} />
+            <Route path="/email" element={<Email />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 };
 

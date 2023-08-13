@@ -1,7 +1,17 @@
 import React from "react";
+import "./Dashboard.scss";
 
 const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <input />
+      <br />
+      <input />
+      <br />
+
+      <button>submit</button>
+    </div>
+  );
 };
 
 export default Dashboard;

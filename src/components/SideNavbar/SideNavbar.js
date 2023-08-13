@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SideNavbar.scss";
 import { SideNavBarMock } from "../../MockData/SideNavBarMock";
 import { useNavigate } from "react-router-dom";
 const SideNavbar = () => {
   const navigate = useNavigate();
 
-  const HandlePage = (page) => {
-    ChangePage(page);
-  };
-
-  const ChangePage = (page) => {
-    if (SideNavBarMock[0] === page) {
-      navigate("dashboard");
-    }
+  const HandlePage = (url) => {
+    navigate(url);
   };
 
   return (
@@ -20,16 +14,16 @@ const SideNavbar = () => {
       <div className="SideNavbar-container">
         {SideNavBarMock.map((items, i) => {
           return (
-            <>
+            <div className="sidebar-header">
+              {<items.icon size={29} className="icon" />}
               <button
                 className="side-header"
                 keys={i}
-                onClick={() => HandlePage(items)}
+                onClick={() => HandlePage(items.url)}
               >
-                {items}
+                {items.tabname}
               </button>
-              <br />
-            </>
+            </div>
           );
         })}
       </div>

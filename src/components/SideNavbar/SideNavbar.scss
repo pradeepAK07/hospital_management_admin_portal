@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+.sidebar-header {
+  display: flex;
+  padding: 0 0.5rem;
+  text-align: left;
+  width: 70%;
+  background-color: inherit;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.icon {
+  text-align: left;
+}
+.SideNavbar {
+  background-color: rgb(212, 215, 218);
+  padding: 1rem;
+  height: 87.5vh;
+  width: 17vw;
+  box-shadow: 0.4px 0.4px 4px rgb(226, 221, 221);
+}
+.side-header {
+  text-align: left;
+  font-size: 1.3rem;
+  border: none;
+  background-color: inherit;
+  padding: 1rem 1rem;
+}
+
+.sidebar-header:hover {
+  font-weight: 700;
+  color: rgb(17, 98, 159);
+  background-color: rgb(176, 179, 182);
+}
